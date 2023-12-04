@@ -12,17 +12,23 @@ class Users(Resource):
         return {'data' : data}, 200
 
     def post(self):
-        json = request.get_json()
+        name = request.args['name']
+        age = request.args['age']
+        city = request.args['city']
+        # new variables added
+        country = request.args['country']
+        email = request.args['email']
         req_data = pd.DataFrame({
-            'name'      : [json['name']],
-            'age'       : [json['age']],
-            'city'      : [json['city']],
+            'name'      : [name]
+            'age'       : [age],
+            'city'      : [city],
             # new variables added
-            'country'      : [json['country']],
-            'email'       : [json['email']]
+            'country'      : [country],
+            'email'       : [email]
         })
         data = pd.read_csv('kullanici.csv')
-        data = pd.concat([data, req_data], ignore_index=True)
+        # data = pd.concat([data, req_data], ignore_index=True)
+        data = data.append(req_data, ignore_index=True)
         data.to_csv('kullanici.csv', index=False)
         return {'message' : 'Record successfully added.'}, 200
 
