@@ -5,11 +5,8 @@
 - Url endpointsleri tanımlandı.
 ## odev2
 ### Posta Kodlarının Bilgilerini Gösteren Api
-- publicApiPostalCode kullanıcıdan değer alarak ekrana sonuç yazdırmaktadır.
+- publicApiPostalCode kullanıcıdan değer alarak ekrana sonuç yazdırır.
 - Girilen ülke koduna ve posta coduna göre değerler ekrana yazdırmaktadır.
-### F1 Yarış Sonuçları, Sıralamalarını Gösteren Api
-- Verileri json veya xml olarak dönen bir apidir.
-- Csv olarak verilerin dönmesi için pandas kütüphanesine ihtiyaç duymaktadır.
-- Deneme amaçlı yazılmıştır. 
-- Static olarak çalışmaktadır ancak kullanıcıdan değer alma kısmında hata formattan kaynaklı hatalar almaktadır.
+- Publi api web adresi [https://api.zippopotam.us/](https://api.zippopotam.us/)
+
 
