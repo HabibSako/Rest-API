@@ -10,5 +10,5 @@
 - Publi api web adresi [https://api.zippopotam.us/](https://api.zippopotam.us/)
 
 ## Docker
-### Docker kullanarak Apı servisinin ayağa kaldırılması
+### Docker kullanarak Api servisinin ayağa kaldırılması
 
