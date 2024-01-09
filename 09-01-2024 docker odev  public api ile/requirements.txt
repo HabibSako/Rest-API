@@ -1,0 +1,7 @@
+Flask
+sqlalchemy
+flask_sqlalchemy
+requests
+pandas
+Flask-RESTful
+json

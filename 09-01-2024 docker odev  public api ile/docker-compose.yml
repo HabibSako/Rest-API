@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./ders9
+    command: python3 publicApiPostalCode  -h 0.0.0.0
+    volumes:
+      - ./ders9/:/usr/src/app/
+    ports:
+      - 5005:5005
