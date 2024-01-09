@@ -1,18 +1,31 @@
 ### Ödev - 2 Public Api ###
 
+from flask import Flask
+from flask_restful import Api, Resource
 import requests
-import xmltodict
-import pandas as pd
+import json
 
-country = input("Ülke kodunu giriniz (ör: tr) :")
-postal_code = input("Posta kodunu giriniz (ör: 34880) :")
-print(country+ " / " +postal_code)
+app = Flask(__name__)
+api = Api(app)
 
-url =f"https://api.zippopotam.us/{country}/{postal_code}"
-reponse = requests.get(url)
+class PostalInfo(Resource):
+    def get(self):
+        country = request.args.get('country')
+        postal_code = request.args.get('postal_code')
 
-if reponse.status_code == 200:
-    data = reponse.json()
-    print(data)
-else:
-    print("api isteği başarısız oldu.")
+        if not country or not postal_code:
+            return '{"error": "Ülke kodu ve posta kodu gerekli"}', 400
+
+        url = f"https://api.zippopotam.us/{country}/{postal_code}"
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            data = response.json()
+            return json.dumps(data)
+        else:
+            return '{"error": "API isteği başarısız oldu"}', 500
+
+api.add_resource(PostalInfo, '/api/postal_info')
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
