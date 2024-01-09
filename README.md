@@ -9,4 +9,6 @@
 - Girilen ülke koduna ve posta coduna göre değerler ekrana yazdırmaktadır.
 - Publi api web adresi [https://api.zippopotam.us/](https://api.zippopotam.us/)
 
+## Docker
+### Docker kullanarak Api servisinin ayağa kaldırılması
 
