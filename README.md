@@ -10,5 +10,7 @@
 - Publi api web adresi [https://api.zippopotam.us/](https://api.zippopotam.us/)
 
 ## Docker
-### Docker kullanarak Api servisinin ayağa kaldırılması
+### Docker kullanarak Api servisinin ayağa kaldırılması(Derste yaplan uygulama)
+## ikinci docker dosyası (09-01-2024)
+### Public api ile docker ayağa kaldırılmaya çalışıldı. (Vm dışından erişim sıkıntısı var).
 
